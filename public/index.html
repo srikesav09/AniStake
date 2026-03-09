@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>AniStake</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="icon" type="image/png" href="icon.jpg">
+    <script src="backend.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-stone-100">
+   
+
+    <nav class="flex items-center justify-center bg-amber-800 p-4 fixed w-full top-0 shadow-md z-50">
+      <div class="flex items-center space-x-3">
+        <img src="icon.jpg" class="w-12 h-12 rounded-full transform hover:scale-110 transition duration-300 cursor-pointer">
+        <p class="text-2xl font-bold text-white">AniStake</p>
+      </div>
+    </nav>
+
+    <main class="pt-24 px-5 sm:px-10">
+      <h2 class="text-3xl font-bold mb-6 text-gray-800">Top Anime Picks 🎬</h2>
+      <div class="mb-8 flex justify-center">
+  <input 
+    type="text" 
+    id="searchInput"
+    placeholder="Search anime..."
+    class="w-full max-w-md px-4 py-2 rounded-l-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-amber-600"
+    onkeyup="searchAnime()"
+  >
+  <button 
+    class="bg-amber-800 text-white px-4 py-2 rounded-r-xl hover:bg-amber-900 transition">
+    Search
+  </button>
+</div>
+
+      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
+        
+        <div class="anime-card bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transform hover:scale-105 transition duration-300 cursor-pointer">
+        <img src="https://upload.wikimedia.org/wikipedia/en/9/90/One_Piece%2C_Volume_61_Cover_%28Japanese%29.jpg" alt="One Piece" class="w-full h-40 object-cover">
+          <div class="p-3">
+            <p class="font-bold">One Piece</p>
+            <p class="text-sm text-gray-600">⭐ 9.0 / 10</p>
+          </div>
+        </div>
+
+        
+        <div class="anime-card bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transform hover:scale-105 transition duration-300 cursor-pointer">
+          <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRQGbVHaNzWSDvccDeaqRowgLbShj-dsgVJMYrKcRSUDGWiyrVtHa7MHrGnT_lZuL4o8VUC1va4fVOxLV_Ki5v_eG7NSFjQ_HPOt_cHkQ" alt="Naruto" class="w-full h-40 object-cover">
+          <div class="p-3">
+            <p class="font-bold">Naruto</p>
+            <p class="text-sm text-gray-600">⭐ 8.3 / 10</p>
+          </div>
+        </div>
+
+<div class="anime-card bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transform hover:scale-105 transition duration-300 cursor-pointer">          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-97Z_d4-GijeNa_KMcW8F7igIv38SAcwcxg&s" alt="Attack on Titan" class="w-full h-40 object-cover">
+          <div class="p-3">
+            <p class="font-bold">Attack on Titan</p>
+            <p class="text-sm text-gray-600">⭐ 9.1 / 10</p>
+          </div>
+        </div>
+
+        
+<div class="anime-card bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transform hover:scale-105 transition duration-300 cursor-pointer">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSb8kht3z2M4Umdtlo2ilSOh23s-miOk9rW4g&s" alt="Death Note" class="w-full h-40 object-cover">
+          <div class="p-3">
+            <p class="font-bold">Death Note</p>
+            <p class="text-sm text-gray-600">⭐ 9.0 / 10</p>
+          </div>
+        </div>
+
+<div class="anime-card bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transform hover:scale-105 transition duration-300 cursor-pointer">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRs5AomgBlabtqVWhsmTcFfEZ3NmMCPsuolDg&s" alt="Demon Slayer" class="w-full h-40 object-cover">
+          <div class="p-3">
+            <p class="font-bold">Demon Slayer</p>
+            <p class="text-sm text-gray-600">⭐ 8.7 / 10</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-5 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
+        
+<div class="anime-card bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transform hover:scale-105 transition duration-300 cursor-pointer">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxJ62WUKOFgs43sXGDoxJCBKisMw3sq9BkEA&s" alt="Jujutsu Kaisen" class="w-full h-40 object-cover">
+          <div class="p-3">
+            <p class="font-bold">Jujutsu Kaisen</p>
+            <p class="text-sm text-gray-600">⭐ 8.6 / 10</p>
+          </div>
+        </div>
+
+<div class="anime-card bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transform hover:scale-105 transition duration-300 cursor-pointer">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSU4ECg1wqcLGc3w3HPSSTPc0n6EBLxTBOHiw&s" alt="My Hero Academia" class="w-full h-40 object-cover">
+          <div class="p-3">
+            <p class="font-bold">My Hero Academia</p>
+            <p class="text-sm text-gray-600">⭐ 8.0 / 10</p>
+          </div>
+        </div>
+
+<div class="anime-card bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transform hover:scale-105 transition duration-300 cursor-pointer">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRS2RiRO58lStahOXdYEts9S6PIITqp_R6WCQ&s" alt="Fullmetal Alchemist" class="w-full h-40 object-cover">
+          <div class="p-3">
+            <p class="font-bold">Fullmetal Alchemist</p>
+            <p class="text-sm text-gray-600">⭐ 9.1 / 10</p>
+          </div>
+        </div>
+
+<div class="anime-card bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transform hover:scale-105 transition duration-300 cursor-pointer">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIvLFK7fNcVUOS2AyOdtyvToGw8387n8pPCA&s" alt="Hunter x Hunter" class="w-full h-40 object-cover">
+          <div class="p-3">
+            <p class="font-bold">Hunter × Hunter</p>
+            <p class="text-sm text-gray-600">⭐ 9.0 / 10</p>
+          </div>
+        </div>
+
+<div class="anime-card bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transform hover:scale-105 transition duration-300 cursor-pointer">
+            <img src="https://upload.wikimedia.org/wikipedia/en/7/72/Bleachanime.png" alt="Bleach" class="w-full h-40 object-cover">
+          <div class="p-3">
+            <p class="font-bold">Bleach</p>
+            <p class="text-sm text-gray-600">⭐ 8.2 / 10</p>
+          </div>
+        </div>
+      </div>
+
+     
+      <div class="mt-5 mb-5 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
+
+<div class="anime-card bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transform hover:scale-105 transition duration-300 cursor-pointer">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTcks04avJsyq7-RrPFzgkaey8hwm5Hm98vWQ&s" alt="Tokyo Ghoul" class="w-full h-40 object-cover">
+          <div class="p-3">
+            <p class="font-bold">Tokyo Ghoul</p>
+            <p class="text-sm text-gray-600">⭐ 7.9 / 10</p>
+          </div>
+        </div>
+
+<div class="anime-card bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transform hover:scale-105 transition duration-300 cursor-pointer">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAMgBj7Du0mrdFuhGDiP4Ph1gD_orVeRsNtw&s" alt="Fairy Tail" class="w-full h-40 object-cover">
+          <div class="p-3">
+            <p class="font-bold">Fairy Tail</p>
+            <p class="text-sm text-gray-600">⭐ 7.7 / 10</p>
+          </div>
+        </div>
+
+<div class="anime-card bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transform hover:scale-105 transition duration-300 cursor-pointer">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWkYrq27hH7yp2VyTzgtIVXgQPpRyLMyAC7Q&s" alt="Sword Art Online" class="w-full h-40 object-cover">
+          <div class="p-3">
+            <p class="font-bold">Sword Art Online</p>
+            <p class="text-sm text-gray-600">⭐ 7.6 / 10</p>
+          </div>
+        </div>
+
+<div class="anime-card bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transform hover:scale-105 transition duration-300 cursor-pointer">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSuDgLnlLZy2xV2r3KSE-UXuxnNq9g1uzJvsw&s" alt="Cowboy Bebop" class="w-full h-40 object-cover">
+          <div class="p-3">
+            <p class="font-bold">Cowboy Bebop</p>
+            <p class="text-sm text-gray-600">⭐ 8.9 / 10</p>
+          </div>
+        </div>
+
+<div class="anime-card bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transform hover:scale-105 transition duration-300 cursor-pointer">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZmIB4CulWRer4r41RcZqAQR555EnSL21xYQ&s" alt="Dragon Ball Z" class="w-full h-40 object-cover">
+          <div class="p-3">
+            <p class="font-bold">Dragon Ball Z</p>
+            <p class="text-sm text-gray-600">⭐ 8.7 / 10</p>
+          </div>
+        </div>
+      </div>
+
+<div class="mt-5 mb-5 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
+<div class="anime-card bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transform hover:scale-105 transition duration-300 cursor-pointer">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFBKyqAq6H75d_W4PGtFxUZYRPrY8Pb7WI2Q&s" alt="Black Clover" class="w-full h-40 object-cover">
+    <div class="p-3">
+      <p class="font-bold">Black Clover</p>
+      <p class="text-sm text-gray-600">⭐ 7.8 / 10</p>
+    </div>
+  </div>
+
+<div class="anime-card bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transform hover:scale-105 transition duration-300 cursor-pointer">
+      <img src="https://upload.wikimedia.org/wikipedia/en/c/c3/OnePunchMan_manga_cover.png" alt="One Punch Man" class="w-full h-40 object-cover">
+    <div class="p-3">
+      <p class="font-bold">One Punch Man</p>
+      <p class="text-sm text-gray-600">⭐ 8.7 / 10</p>
+    </div>
+  </div>
+
+<div class="anime-card bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transform hover:scale-105 transition duration-300 cursor-pointer">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfH5_KU8akhYeeGMtoHwmSTUn-AXF6LSePDw&s" alt="Dr. Stone" class="w-full h-40 object-cover">
+    <div class="p-3">
+      <p class="font-bold">Dr. Stone</p>
+      <p class="text-sm text-gray-600">⭐ 8.2 / 10</p>
+    </div>
+  </div>
+
+<div class="anime-card bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transform hover:scale-105 transition duration-300 cursor-pointer">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOs1vhkZaLevsU1vCY2YR2HD0AxEnkJbtnTg&s" alt="Blue Exorcist" class="w-full h-40 object-cover">
+    <div class="p-3">
+      <p class="font-bold">Blue Exorcist</p>
+      <p class="text-sm text-gray-600">⭐ 7.6 / 10</p>
+    </div>
+  </div>
+
+<div class="anime-card bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transform hover:scale-105 transition duration-300 cursor-pointer">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTI9zPpuL4vWxfmLqWSm2po22gJA2YQgFeS-w&s" alt="Code Geass" class="w-full h-40 object-cover">
+    <div class="p-3">
+      <p class="font-bold">Code Geass</p>
+      <p class="text-sm text-gray-600">⭐ 8.9 / 10</p>
+          </div>
+        </div>
+      </div>
+      <footer class="text-center text-gray-500 text-sm p-4">
+  © 2025 srikesav — Licensed under <a href="LICENSE" class="text-blue-600">MIT License</a>
+</footer>
+
+<script>
+function searchAnime() {
+  let input = document.getElementById("searchInput").value.toLowerCase();
+  let cards = document.getElementsByClassName("anime-card");
+
+  for (let i = 0; i < cards.length; i++) {
+    let title = cards[i].innerText.toLowerCase();
+
+    if (title.includes(input)) {
+      cards[i].style.display = "";
+    } else {
+      cards[i].style.display = "none";
+    }
+  }
+}
+</script>
+
+    </main>
+  </body>
+</html>
